@@ -16,10 +16,10 @@ LOCAL_C_INCLUDES:= \
         $(TOP)/external/flac/include \
         $(TOP)/system/core/base/include \
 
-ifeq ($(TARGET_QCOM_MEDIA_VARIANT),)
+ifeq ($(QCOM_HARDWARE_VARIANT),)
     LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/media/mm-core/inc
 else
-    LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
+    LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/media-caf/$(QCOM_HARDWARE_VARIANT)/mm-core/inc
 endif
 
 LOCAL_SHARED_LIBRARIES += \
@@ -64,10 +64,10 @@ LOCAL_C_INCLUDES:= \
         $(TOP)/external/flac/include \
         $(TOP)/system/core/base/include \
 
-ifeq ($(TARGET_QCOM_MEDIA_VARIANT),)
+ifeq ($(QCOM_HARDWARE_VARIANT),)
     LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/media/mm-core/inc
 else
-    LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
+    LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/media-caf/$(QCOM_HARDWARE_VARIANT)/mm-core/inc
 endif
 
 LOCAL_SHARED_LIBRARIES += \
